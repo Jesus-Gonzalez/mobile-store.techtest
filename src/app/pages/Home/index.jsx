@@ -1,7 +1,15 @@
 import React from "react";
 
+import { DefaultLayout } from "app/components";
+
+import { View } from "./components";
+
 const HomePage = () => {
-  return <h1>hola mundo! home</h1>;
+  return (
+    <DefaultLayout>
+      <View />
+    </DefaultLayout>
+  );
 };
 
 export default HomePage;
