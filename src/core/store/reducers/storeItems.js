@@ -1,3 +1,9 @@
+import {
+  REQUEST_STORE_ITEMS,
+  LOADED_STORE_ITEMS,
+  ERROR_STORE_ITEMS,
+} from "../actions";
+
 const initialState = {
   error: false,
   items: [],
