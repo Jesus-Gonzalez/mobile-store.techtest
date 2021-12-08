@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useSelector } from "react-redux";
 
 import { selectors } from "core/store";
+
+import { useSearch } from "../hooks";
 
 import ListItem from "./ListItem";
 import { Grid } from "./template";
 
 const List = () => {
+  const { searchText } = useSearch();
   const { loading, error, items } = useSelector(selectors.storeItems.state);
+
+  const itemsToDisplay = useMemo(() => {
+    if (searchText === "") {
+      return items;
+    }
+
+    return items.filter((item) =>
+      [item.brand, item.model].some((property) => property.includes(searchText))
+    );
+  });
 
   if (loading) {
     return <h2>Loading...</h2>;
@@ -22,9 +35,13 @@ const List = () => {
     );
   }
 
+  if (itemsToDisplay.length === 0) {
+    return <h2>No Results</h2>;
+  }
+
   return (
     <Grid>
-      {items.map((item) => (
+      {itemsToDisplay.map((item) => (
         <ListItem key={item.id} item={item} />
       ))}
     </Grid>

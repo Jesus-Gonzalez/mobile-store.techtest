@@ -1,8 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
 import { GridItem } from "./template";
 
-const ListItem = () => {
-  return <GridItem></GridItem>;
+const ListItem = (props) => {
+  const { item } = props;
+
+  return (
+    <GridItem>
+      <Link to="/detail" state={item}>
+        <img src={item.imgUrl} />
+      </Link>
+    </GridItem>
+  );
+};
+
+ListItem.propTypes = {
+  item: PropTypes.object,
 };
 
 export default ListItem;
