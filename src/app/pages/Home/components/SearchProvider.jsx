@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import PropTypes from "prop-types";
 
-import { SearchContext } from "core/context";
+import { SearchContext } from "../context";
 
 const SearchProvider = ({ children }) => {
   const [searchText, setSearchText] = useState("");

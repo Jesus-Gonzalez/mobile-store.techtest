@@ -2,8 +2,8 @@ import React from "react";
 
 import Image from "./Image";
 import Description from "./Description";
+import Actions from "./Actions";
 import { Column, Product } from "./template";
-
 import { useDetail } from "../hooks";
 
 const View = () => {
@@ -25,7 +25,7 @@ const View = () => {
 
       <Column>
         <Description />
-        {/* <Actions /> */}
+        <Actions />
       </Column>
     </Product>
   );

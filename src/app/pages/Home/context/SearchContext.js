@@ -1,8 +1,8 @@
 import { createContext } from "react";
 
-const StoreContext = createContext({
+const SearchContext = createContext({
   searchText: "",
   setSearchText: () => {},
 });
 
-export default StoreContext;
+export default SearchContext;
