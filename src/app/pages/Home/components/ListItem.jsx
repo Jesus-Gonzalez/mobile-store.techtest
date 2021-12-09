@@ -9,7 +9,7 @@ const ListItem = (props) => {
 
   return (
     <GridItem>
-      <Link to="/detail" state={item}>
+      <Link to={`/detail/${item.id}`}>
         <img src={item.imgUrl} />
       </Link>
     </GridItem>

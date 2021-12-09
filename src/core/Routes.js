@@ -6,7 +6,7 @@ import { HomePage, DetailPage } from "../app/pages";
 const RootRoute = () => (
   <Routes>
     <Route path="/" element={<HomePage />} />
-    <Route path="/detail" element={<DetailPage />} />
+    <Route path="/detail/:itemId" element={<DetailPage />} />
   </Routes>
 );
 

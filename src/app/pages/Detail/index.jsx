@@ -1,7 +1,15 @@
 import React from "react";
 
+import { DefaultLayout } from "app/components";
+
+import { View } from "./components";
+
 const DetailPage = () => {
-  return <h1>hola mundo! detalle</h1>;
+  return (
+    <DefaultLayout>
+      <View />
+    </DefaultLayout>
+  );
 };
 
 export default DetailPage;
