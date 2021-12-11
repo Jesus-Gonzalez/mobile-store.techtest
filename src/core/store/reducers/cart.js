@@ -1,24 +1,15 @@
-import {
-  ADD_ITEM_TO_CART,
-  REMOVE_ITEM_FROM_CART,
-  CLEAR_CART,
-} from "../actions";
+import { SET_CART_ITEM_COUNT } from "../actions";
 
-const initialState = [];
+const persistedCount = sessionStorage.getItem("mobile-store.cart.count");
+
+const initialState = {
+  count: persistedCount ?? 0,
+};
 
 const cart = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_ITEM_TO_CART: {
-      return state.concat(action.payload.item);
-    }
-    case REMOVE_ITEM_FROM_CART: {
-      const index = state.findIndex(
-        (item) => item.id === action.payload.item.id
-      );
-      return [...state.slice(0, index), ...state.slice(index)];
-    }
-    case CLEAR_CART: {
-      return [];
+    case SET_CART_ITEM_COUNT: {
+      return { ...state, count: action.payload };
     }
 
     default: {

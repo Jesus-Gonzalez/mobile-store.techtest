@@ -60,3 +60,5 @@ export const ProductOption = styled.li`
       border: 1px solid red;
     `}
 `;
+
+export const AddToCartButton = styled.button``;

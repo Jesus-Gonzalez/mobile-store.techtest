@@ -5,6 +5,7 @@ import { selectors } from "core/store";
 
 import ActionsProvider from "./ActionsProvider";
 import ProductOptionSelector from "./ProductOptionSelector";
+import AddToCart from "./AddToCart";
 import { Card, CardTitle } from "./template";
 
 const Actions = () => {
@@ -22,6 +23,8 @@ const Actions = () => {
             optionKey={key}
           />
         ))}
+
+        <AddToCart />
       </Card>
     </ActionsProvider>
   );

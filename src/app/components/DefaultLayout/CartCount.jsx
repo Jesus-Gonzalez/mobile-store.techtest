@@ -6,9 +6,9 @@ import { selectors } from "core/store";
 import { CartCountComponent } from "./template";
 
 const CartCount = () => {
-  const cartCount = useSelector(selectors.cart.cartCount);
+  const count = useSelector(selectors.cart.count);
 
-  return <CartCountComponent>{cartCount}</CartCountComponent>;
+  return <CartCountComponent>{count}</CartCountComponent>;
 };
 
 export default CartCount;

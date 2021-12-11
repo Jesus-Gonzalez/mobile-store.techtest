@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
 
-const cartSelector = (state) => state.cart;
+const countSelector = (state) => state.cart.count;
 
-export const cartCount = createSelector(cartSelector, (cart) => cart.length);
+export const count = createSelector(countSelector, (count) => count);

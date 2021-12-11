@@ -1,17 +1,13 @@
-export const ADD_ITEM_TO_CART = "cart::addItemToCart";
-export const REMOVE_ITEM_FROM_CART = "cart::removeItemFromCart";
-export const CLEAR_CART = "cart::clearCart";
+export const SET_CART_ITEM_COUNT = "cart::setCartItemCount";
 
-export const addItemToCart = (item) => ({
-  type: ADD_ITEM_TO_CART,
-  payload: { item },
+const setCartItemsCountToStore = (count) => ({
+  type: SET_CART_ITEM_COUNT,
+  payload: count,
 });
 
-export const removeItemFromCart = (item) => ({
-  type: REMOVE_ITEM_FROM_CART,
-  payload: { item },
-});
-
-export const clearCart = () => ({
-  type: CLEAR_CART,
-});
+export const setCartItemsCount = (count) => {
+  return (dispatch) => {
+    sessionStorage.setItem("mobile-store.cart.count", count);
+    dispatch(setCartItemsCountToStore(count));
+  };
+};

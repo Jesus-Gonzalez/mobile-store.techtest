@@ -1,3 +1,4 @@
+export * from "./useAddToCart";
 export * from "./useDescription";
 export * from "./useDetail";
 export * from "./useProductOptionsProvider";
