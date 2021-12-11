@@ -44,7 +44,7 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  padding: 0.25rem 1rem;
+  padding: 1rem;
   border: 1px solid black;
   border-radius: 0.33rem;
   max-width: 300px;
