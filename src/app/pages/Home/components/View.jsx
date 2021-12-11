@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Breadcrumbs } from "app/components";
-
 import Search from "./Search";
 import List from "./List";
 import SearchProvider from "./SearchProvider";
@@ -14,7 +12,6 @@ const View = () => {
   return (
     <SearchProvider>
       <ContentWrapper>
-        <Breadcrumbs>Home</Breadcrumbs>
         <Search />
         <List />
       </ContentWrapper>
