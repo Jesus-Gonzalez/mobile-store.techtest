@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Mobile Store Tech-Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# English
 
-## Available Scripts
+## Welcome
 
-In the project directory, you can run:
+Welcome to the "Mobile Store TechTest"
 
-### `yarn start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The "Mobile Store TechTest" project delivers a mobile phones store where we list and navigate to the devices' details.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Scripts
 
-### `yarn test`
+I've used create-react-app for simplicity:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The scripts we are going to use in the techtest are the following:
 
-### `yarn build`
+- `start` starts development mode.
+- `build` executes the production build of the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The following stack has been used:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- react
+- redux
+- react-redux
+- redux-thunk
+- reselect
+- react-router
+- styled-components
+- eslint
+- editorconfig
+- prettier
+- husky (git hooks)
+- yarn
 
-### `yarn eject`
+## Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The project source code is in the `src` directory.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I have divided the `core` and `app` parts of the application in independent directories.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The pages are defined in the `app/pages` directory, where each module contains the necessary components and logic components to run itself.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Architecture
 
-## Learn More
+I am using react-hooks all the way through.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I have tried to make the architecture, logic and components easy to read and understand.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## About the Design
 
-### Code Splitting
+Because the tech-test is focused on development and architectural challenges, I have developed the esential and basic design and followed to demonstrate the capabilities of react, redux and how to write and architecture an SPA.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Español
 
-### Analyzing the Bundle Size
+## Bienvenido
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Bienvenido al proyecto "Mobile Store TechTest"
 
-### Making a Progressive Web App
+## Descripción
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+El proyecto muestra una tienda de teléfonos móviles donde listamos y navegamos a los detalles de los dispositivos. Podemos añadir productos seleccionando caraceterísticas.
 
-### Advanced Configuration
+## Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+He utlizado create-react-app para simplificar el desarrollo y setup.
 
-### Deployment
+Los scripts que se utilizan son los siguientes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `start` inicia el modo desarrollo.
+- `build` ejecuta la build de producción.
 
-### `yarn build` fails to minify
+## Tecnologías
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+He utilizado el stack siguiente:
+
+- react
+- redux
+- react-redux
+- redux-thunk
+- reselect
+- react-router
+- styled-components
+- eslint
+- editorconfig
+- prettier
+- husky (git hooks)
+- yarn
+
+## Estructura
+
+El código fuente se encuentra en `src`.
+
+He dividido en partes `core` y `app` en directorios independientes.
+
+Las páginas se definen en `app/pages` donde cada una está encapsulada y modularizada, incluyendo los componentes necesarios y su lógica para ser mostradas.
+
+## Arquitectura
+
+He intentado hacer la arquitectura, lógica y componentes fácil de leer y entender.
+
+## Sobre el Diseño
+
+Porque la prueba está enfocada en desafíos de desarrollo y arquitectónicos, he desarrollado un diseño básico y esencial, y he proseguido a demostrar las capacidades de react, redux y cómo escribir components y crear la arquitectura de una aplicación SPA.
