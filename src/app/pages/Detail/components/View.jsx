@@ -3,7 +3,7 @@ import React from "react";
 import Image from "./Image";
 import Description from "./Description";
 import Actions from "./Actions";
-import { Column, Product } from "./template";
+import { Column, Product, ProductWrapper } from "./template";
 import { useDetail } from "../hooks";
 
 const View = () => {
@@ -18,16 +18,18 @@ const View = () => {
   }
 
   return (
-    <Product>
-      <Column>
-        <Image />
-      </Column>
+    <ProductWrapper>
+      <Product>
+        <Column>
+          <Image />
+        </Column>
 
-      <Column>
-        <Description />
-        <Actions />
-      </Column>
-    </Product>
+        <Column>
+          <Description />
+          <Actions />
+        </Column>
+      </Product>
+    </ProductWrapper>
   );
 };
 

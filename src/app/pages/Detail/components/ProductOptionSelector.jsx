@@ -1,8 +1,18 @@
 import React, { useCallback, useContext } from "react";
 import PropTypes from "prop-types";
 
-import { ProductOptionList, ProductOption } from "./template";
+import {
+  ProductOptionList,
+  ProductOption,
+  ProductOptionLabel,
+  ProductOptionWrapper,
+} from "./template";
 import { ProductOptionsContext } from "../context";
+
+const labels = {
+  colors: "Color",
+  storages: "Storage",
+};
 
 const ProductOptionSelector = (props) => {
   const { option, optionKey } = props;
@@ -17,17 +27,20 @@ const ProductOptionSelector = (props) => {
   );
 
   return (
-    <ProductOptionList>
-      {option.map((item) => (
-        <ProductOption
-          key={item.code}
-          selected={selectedOption === item}
-          onClick={() => handleClickOption(item)}
-        >
-          {item.name}
-        </ProductOption>
-      ))}
-    </ProductOptionList>
+    <ProductOptionWrapper>
+      <ProductOptionLabel>{labels[optionKey]}</ProductOptionLabel>
+      <ProductOptionList>
+        {option.map((item) => (
+          <ProductOption
+            key={item.code}
+            selected={selectedOption === item}
+            onClick={() => handleClickOption(item)}
+          >
+            {item.name}
+          </ProductOption>
+        ))}
+      </ProductOptionList>
+    </ProductOptionWrapper>
   );
 };
 
