@@ -1,12 +1,14 @@
 import React from "react";
 
 import CartCount from "./CartCount";
-import { HeaderComponent } from "./template";
+import { HeaderComponent, Title, TitleLink } from "./template";
 
 const Header = () => {
   return (
     <HeaderComponent>
-      <h1>Mobile Store</h1>
+      <TitleLink to="/">
+        <Title>Mobile Store</Title>
+      </TitleLink>
       <CartCount />
     </HeaderComponent>
   );

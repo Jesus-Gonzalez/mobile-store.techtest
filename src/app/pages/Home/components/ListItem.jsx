@@ -1,17 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 
-import { GridItem } from "./template";
+import {
+  GridItem,
+  ItemCard,
+  ItemCardButton,
+  ItemImage,
+  ItemLink,
+} from "./template";
 
 const ListItem = (props) => {
   const { item } = props;
 
   return (
     <GridItem>
-      <Link to={`/detail/${item.id}`}>
-        <img src={item.imgUrl} />
-      </Link>
+      <ItemLink to={`/detail/${item.id}`}>
+        <ItemCard>
+          <ItemImage src={item.imgUrl} />
+          <ItemCardButton>View</ItemCardButton>
+        </ItemCard>
+      </ItemLink>
     </GridItem>
   );
 };
