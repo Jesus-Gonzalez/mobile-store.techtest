@@ -38,20 +38,27 @@ export const ItemLink = styled(Link)`
 export const ItemCard = styled.div`
   display: flex;
   flex-direction: column;
+  width: 10rem;
+  max-width: 10rem;
   padding: 2rem 1rem;
   border: 1px solid #aaa;
   border-radius: 0.25rem;
 `;
 
 export const ItemImage = styled.img`
-  width: 140px;
-  height: 185px;
+  width: 10rem;
+  height: 13rem;
+`;
+
+export const ItemLabel = styled.span`
+  margin-top: 0.5rem;
+  color: black;
 `;
 
 export const ItemCardButton = styled.button`
   cursor: pointer;
   padding: 1rem 0.5rem;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   text-transform: uppercase;
   color: darkolivegreen;
   background: lightgreen;
@@ -61,6 +68,7 @@ export const ItemCardButton = styled.button`
 
 export const SearchInput = styled.input.attrs({ type: "search" })`
   align-self: flex-end;
+  width: 20rem;
   padding: 0.5rem 0.25rem;
   margin-bottom: 1rem;
   border: 1px solid black;
