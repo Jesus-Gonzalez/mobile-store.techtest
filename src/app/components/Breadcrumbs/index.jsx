@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Content } from "./template";
+import { Breadcrumb, Content } from "./template";
 
 const Breadcrumbs = (props) => {
   const { children } = props;
@@ -17,3 +17,5 @@ Breadcrumbs.propTypes = {
 };
 
 export default Breadcrumbs;
+
+export { Breadcrumb };

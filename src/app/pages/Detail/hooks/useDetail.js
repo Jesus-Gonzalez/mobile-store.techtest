@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-import { fetchDetail, selectors } from "core/store";
+import { fetchDetail, setBreadcrumbs, selectors } from "core/store";
 
 export const useDetail = () => {
   const dispatch = useDispatch();
@@ -10,6 +10,7 @@ export const useDetail = () => {
 
   const { itemId } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
   if (!itemId) {
     navigate("/");
@@ -18,6 +19,16 @@ export const useDetail = () => {
   useEffect(() => {
     dispatch(fetchDetail(itemId));
   }, []);
+
+  useEffect(() => {
+    if (!item) return;
+    dispatch(
+      setBreadcrumbs([
+        { to: "/", label: "Home" },
+        { to: location.pathname, label: `Device: ${item.brand} ${item.model}` },
+      ])
+    );
+  }, [item]);
 
   return { error, loading, item };
 };

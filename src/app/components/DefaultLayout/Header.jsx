@@ -1,15 +1,21 @@
 import React from "react";
 
 import CartCount from "./CartCount";
-import { HeaderComponent, Title, TitleLink } from "./template";
+import HeaderBreadcrumbs from "./HeaderBreadcrumbs";
+import { HeaderComponent, HeaderRow, Title, TitleLink } from "./template";
 
 const Header = () => {
   return (
     <HeaderComponent>
-      <TitleLink to="/">
-        <Title>Mobile Store</Title>
-      </TitleLink>
-      <CartCount />
+      <HeaderRow>
+        <TitleLink to="/">
+          <Title>Mobile Store</Title>
+        </TitleLink>
+        <CartCount />
+      </HeaderRow>
+      <HeaderRow>
+        <HeaderBreadcrumbs />
+      </HeaderRow>
     </HeaderComponent>
   );
 };

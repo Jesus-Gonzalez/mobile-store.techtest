@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 
 export const HeaderComponent = styled.header`
   display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-bottom: 1px solid darkgrey;
+  background: #eee;
+`;
+
+export const HeaderRow = styled.div`
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: lightyellow;
 `;
 
 export const TitleLink = styled(Link)`
@@ -15,7 +21,6 @@ export const TitleLink = styled(Link)`
 
 export const Title = styled.h1`
   font-size: 16px;
-  color: goldenrod;
 `;
 
 export const Content = styled.div``;
