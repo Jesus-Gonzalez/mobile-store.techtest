@@ -20,10 +20,10 @@ const View = () => {
 
   return (
     <ProductWrapper>
+      <Breadcrumbs>
+        Device Detail: {item.brand} {item.model}
+      </Breadcrumbs>
       <Product>
-        <Breadcrumbs>
-          Device Detail: {item.brand} {item.model}
-        </Breadcrumbs>
         <Column>
           <Image />
         </Column>
