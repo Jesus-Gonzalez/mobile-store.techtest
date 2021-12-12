@@ -35,6 +35,8 @@ The following stack has been used:
 - prettier
 - husky (git hooks)
 - yarn
+- jest
+- @testing-library
 
 ## Structure
 
@@ -101,6 +103,8 @@ He utilizado el stack siguiente:
 - prettier
 - husky (git hooks)
 - yarn
+- jest
+- @testing-library
 
 ## Estructura
 
