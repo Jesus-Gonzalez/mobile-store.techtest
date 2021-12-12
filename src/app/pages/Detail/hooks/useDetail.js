@@ -12,11 +12,10 @@ export const useDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  if (!itemId) {
-    navigate("/");
-  }
-
   useEffect(() => {
+    if (!itemId) {
+      navigate("/");
+    }
     dispatch(fetchDetail(itemId));
   }, []);
 
