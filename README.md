@@ -54,6 +54,18 @@ I have tried to make the architecture, logic and components easy to read and und
 
 Because the tech-test is focused on development and architectural challenges, I have developed the esential and basic design and followed to demonstrate the capabilities of react, redux and how to write and architecture an SPA.
 
+## Testing
+
+I've implemented unit testing with `jest` and `@testing-library`.
+
+I have not tested **all** the application, only a few components and modules.
+
+I have not tested because it requires an extensive setup and mocking, and due to the technical test deadlines and the time I'm able to dedicate to it, I'm not able to implement it fully.
+
+# About "Add to Cart"
+
+During development, regarding the feature `Add to Cart`, the browser prevented and blocked the request to the /api/cart endpoint due to a CORS issue. I've solved it installing an extension to allow CORS and ignore the browser defaults.
+
 # Español
 
 ## Bienvenido
@@ -105,3 +117,15 @@ He intentado hacer la arquitectura, lógica y componentes fácil de leer y enten
 ## Sobre el Diseño
 
 Porque la prueba está enfocada en desafíos de desarrollo y arquitectónicos, he desarrollado un diseño básico y esencial, y he proseguido a demostrar las capacidades de react, redux y cómo escribir components y crear la arquitectura de una aplicación SPA.
+
+## Testing
+
+He implementado unit testing simple con `jest` y `@testing-library`.
+
+No he testeado **toda** la aplicación, solamente algunos componentes y módulos.
+
+No lo he testeado porque necesita un mocking y setup más extenso, y debido a la fecha límite de entrega y el tiempo que soy capaz de dedicar a la prueba, no soy capaz de implementarlo por completo.
+
+# Sobre "Añadir al Carro"
+
+Durante el desarrollo, con relación a la funcionalidad `Añadir al carro`, el navegador indicaba que existía un problema de CORS, el cual he solucionado instalando `CORS Everywhere`, una extensión que ignora la configuración de CORS por defecto del navegador.
