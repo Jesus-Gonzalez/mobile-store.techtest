@@ -1,6 +1,6 @@
 export const SET_CART_ITEM_COUNT = "cart::setCartItemCount";
 
-const setCartItemsCountToStore = (count) => ({
+export const setCartItemsCountToStore = (count) => ({
   type: SET_CART_ITEM_COUNT,
   payload: count,
 });
